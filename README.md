@@ -10,7 +10,7 @@
 Write an application that will display a donut view which pulls the credit score information from the endpoint given. The wire frame shows an example of what is to be achieved. 
 The donut should display the correct value received from the endpoint and use that value to fill the outline of the donut but the same percentage.
 
-![](screenshot.png)
+![](Screenshot.png)
 
 ## Features
 
