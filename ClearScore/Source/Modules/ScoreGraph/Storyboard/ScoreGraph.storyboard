@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QLv-xf-Hlx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dashboard-->
+        <scene sceneID="EnJ-HB-j9S">
+            <objects>
+                <viewController id="q1y-dq-p6S" customClass="ScoreGraphViewController" customModule="ClearScore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YfH-zg-g7A">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8GX-Gt-zFd" customClass="CircleView" customModule="ClearScore" customModuleProvider="target">
+                                <rect key="frame" x="20" y="166" width="335" height="335"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="38f-3Q-0MD">
+                                        <rect key="frame" x="94" y="120" width="147" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your credit score is" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qn9-j4-IJ6">
+                                                <rect key="frame" x="0.0" y="0.0" width="147" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="377" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ln5-iU-xw4">
+                                        <rect key="frame" x="139" y="146" width="57.5" height="43"/>
+                                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="36"/>
+                                        <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="out of 700" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Is-z8-Ce8">
+                                        <rect key="frame" x="128" y="194" width="79" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="6Is-z8-Ce8" firstAttribute="top" secondItem="Ln5-iU-xw4" secondAttribute="bottom" constant="5" id="1Sy-UO-50N"/>
+                                    <constraint firstItem="6Is-z8-Ce8" firstAttribute="centerX" secondItem="8GX-Gt-zFd" secondAttribute="centerX" id="Lkl-jI-kdB"/>
+                                    <constraint firstItem="Ln5-iU-xw4" firstAttribute="top" secondItem="38f-3Q-0MD" secondAttribute="bottom" constant="5.5" id="S3k-Ch-GB7"/>
+                                    <constraint firstItem="Ln5-iU-xw4" firstAttribute="centerX" secondItem="8GX-Gt-zFd" secondAttribute="centerX" id="T26-ff-lx0"/>
+                                    <constraint firstAttribute="width" secondItem="8GX-Gt-zFd" secondAttribute="height" multiplier="1:1" id="XBM-pg-0IO"/>
+                                    <constraint firstItem="38f-3Q-0MD" firstAttribute="centerX" secondItem="8GX-Gt-zFd" secondAttribute="centerX" id="Xe2-AM-jm2"/>
+                                    <constraint firstItem="Ln5-iU-xw4" firstAttribute="centerY" secondItem="8GX-Gt-zFd" secondAttribute="centerY" id="j1y-C2-cNQ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="outerCircleArcRadius">
+                                        <real key="value" value="117"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="outerCircleShadowOpacity">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="innerCircleShadowRadius">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="innerCircleShadowOpacity">
+                                        <real key="value" value="0.20000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="creditScoreLabel" destination="Ln5-iU-xw4" id="9S7-uM-89j"/>
+                                    <outlet property="maximumScoreLabel" destination="6Is-z8-Ce8" id="S41-3c-hb3"/>
+                                    <outlet property="titleLabel" destination="qn9-j4-IJ6" id="EaM-lJ-Fhd"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8GX-Gt-zFd" firstAttribute="centerY" secondItem="YfH-zg-g7A" secondAttribute="centerY" id="aZq-46-JDy"/>
+                            <constraint firstItem="N7r-5Q-f4i" firstAttribute="trailing" secondItem="8GX-Gt-zFd" secondAttribute="trailing" constant="20" id="fNJ-1M-v0x"/>
+                            <constraint firstItem="8GX-Gt-zFd" firstAttribute="leading" secondItem="N7r-5Q-f4i" secondAttribute="leading" constant="20" id="jQR-hw-CZO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="N7r-5Q-f4i"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Dashboard" id="46L-oO-L84"/>
+                    <connections>
+                        <outlet property="circleView" destination="8GX-Gt-zFd" id="tZr-CP-0V4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nSt-Vg-NGM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1070" y="-161"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zRq-go-HTS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QLv-xf-Hlx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Rpv-L5-YQ9">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="q1y-dq-p6S" kind="relationship" relationship="rootViewController" id="G98-g0-txj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c6F-qX-vCa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="344" y="-160.11994002998503"/>
+        </scene>
+    </scenes>
+</document>
